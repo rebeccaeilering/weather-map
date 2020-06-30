@@ -1,0 +1,195 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #1b1b2f;
+  font-size: 16px;
+  color: #eee;
+  font-family: 'Quicksand', sans-serif;
+  letter-spacing: 1px;
+  text-align: center;
+  height: 100vh;
+}
+
+h1 {
+  text-align: center;
+  margin: 0;
+  font-size: 30px;
+}
+
+@media screen and  (min-width: 680px) {
+  h1 {
+    text-align: left;
+  }
+}
+
+h2 {
+  font-size: 24px;
+  font-weight: 400;
+}
+
+h3 {
+  font-size: 18px;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+header {
+  text-align: center;
+  border-bottom: 1px solid #293555;
+  padding: 10px 40px 15px;
+}
+
+@media screen and  (min-width: 680px) {
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.conditions {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: start;
+  padding: 20px;
+  background-image: linear-gradient(to bottom, #1b1b2f, #162447);
+}
+
+@media screen and (min-width: 680px) {
+  .conditions {
+    flex-direction: row-reverse;
+    padding: 40px;
+  }
+}
+
+.content {
+  flex: 1;
+  text-align: left;
+}
+
+.cat-img {
+  position: relative;
+  margin-bottom: 20px;
+  height: auto;
+  overflow: hidden;
+}
+
+/* .cat-img:before {
+  content: '';
+  position: absolute;
+  bottom: -9px;
+  width: 100%;
+  height: 8px;
+  background: #293555;
+} */
+
+@media screen and (min-width: 680px) {
+  .cat-img:before {
+    display: none;
+  }
+}
+
+.cat-img img {
+  position: relative;
+  display: block;
+  width: 100%;
+  cursor: pointer;
+}
+
+.fact {
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+  width: 100%;
+  background: rgba(255,255,255,0.5);
+  color: #1b1b2f;
+  padding: 20px;
+  animation: slidein 2s;
+}
+
+.fact span {
+  font-weight: 700;
+}
+
+.info {
+  padding: 20px 0 0 0;
+}
+
+@media screen and (min-width: 680px) {
+  .info {
+    padding: 0 0 0 40px;
+  }
+}
+
+.info h2 span {
+  display: inline-block;
+}
+
+.info img {
+  vertical-align: middle;
+}
+
+.other-info {
+  margin-top: 40px;
+  border-left: 5px solid #293555;
+}
+
+.other-info span,
+.other-info h3 {
+  display: block;
+  padding: 6px 20px;
+}
+
+.other-info h3 {
+  padding-top: 0;
+}
+
+.other-info span:last-child {
+  padding-bottom: 0;
+}
+
+#weather {
+  font-size: 22px;
+}
+
+#temp {
+  color: #d26c22;
+  font-size: 160px;
+  font-weight: 400;
+  display: block;
+}
+
+
+@keyframes fadeIn {
+  from {
+    opacity: 0; 
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slidein {
+  from {
+    /* margin-left: 100%;
+    width: 300%;  */
+    right: 600px;
+  }
+
+  to {
+    /* margin-left: 0%;
+    width: 100%; */
+    right: 0px;
+
+  }
+}
