@@ -1,5 +1,6 @@
 async function getData() {
-  const response = await fetch('https://api.openweathermap.org/data/2.5/weather?zip=62704,us&units=imperial&APPID=b6c4807a012432d74ee04027d76c6011');
+  const apiKey = config.API_KEY;
+  const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?zip=62704,us&units=imperial&APPID=${apiKey}`);
   const data = await response.json();
   console.log(data)
 
